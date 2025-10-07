@@ -20,13 +20,13 @@ Built using **Next.js (React, TanStack Query)** on the frontend and **NestJS (No
 ---
 
 ## Features
-Search movies via OMDb API  
-View title, year, and poster in a responsive grid  
-Add or remove favorites (stored in memory)  
-Favorites page with cached results  
-Pagination / infinite scroll for search results  
-Mobile-friendly layout with TailwindCSS  
-Clear modular codebase
+-Search movies via OMDb API  
+-View title, year, and poster in a responsive grid  
+-Add or remove favorites (stored in memory)  
+-Favorites page with cached results  
+-Pagination / infinite scroll for search results  
+-Mobile-friendly layout with TailwindCSS  
+-Clear modular codebase
 
 ---
 
@@ -56,7 +56,7 @@ Clear modular codebase
 
 ## Getting Started
 
-### 1. Clone the repo
+1. Clone the repo
 ```bash
 git clone https://github.com/eshreyareddy/movie-search-favorites.git
 cd movie-search-favorites
