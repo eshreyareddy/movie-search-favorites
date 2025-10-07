@@ -21,14 +21,13 @@ The project demonstrates a modular full-stack architecture with **Next.js (React
 ---
 
 ## Features
-
-- Search movies via OMDb API  
-- View title, year, and poster in a responsive grid  
-- Add or remove favorites (stored in memory)  
-- Favorites page with cached results  
-- Pagination / infinite scrolling for search results  
-- Mobile-friendly interface built with TailwindCSS  
-- Clear, maintainable, modular codebase
+Search movies via OMDb API  
+View title, year, and poster in a responsive grid  
+Add or remove favorites (stored in memory)  
+Favorites page with cached results  
+Pagination / infinite scroll for search results  
+Mobile-friendly layout with TailwindCSS  
+Clear modular codebase
 
 ---
 
@@ -60,46 +59,49 @@ The project demonstrates a modular full-stack architecture with **Next.js (React
 
 ## Getting Started
 
-### 1. Clone the repository
+### 1. Clone the repo
 ```bash
 git clone https://github.com/eshreyareddy/movie-search-favorites.git
+
 cd movie-search-favorites
-2. Run the backend
-bash
-Copy code
+
+3. Run the backend
 cd backend
+
 npm install
+
 npm run start:dev
-The backend will start on http://localhost:4000
+Server runs on http://localhost:4000
 
-3. Run the frontend
-bash
-Copy code
+4. Run the frontend
 cd ../frontend
+
 npm install
+
 npm run dev
-The frontend will start on http://localhost:3000
+Frontend runs on http://localhost:3000
 
-Future Improvements
-If deployed to production, the following enhancements are recommended:
+ Bonus Enhancements
+If this were deployed to production, I’d add:
 
-Persistent storage using SQLite or PostgreSQL
+Persistent favorites (SQLite or Supabase)
 
-API caching layer (Redis)
+API rate-limit caching (Redis)
 
-User authentication (Supabase or Auth.js)
+Auth (Supabase / Auth.js)
 
-Docker deployment for consistency
+Docker deployment
 
-CI/CD pipeline with GitHub Actions
+CI/CD (GitHub Actions)
 
-Unit tests using Jest and React Testing Library
+Unit tests (Jest + React Testing Library)
 
- UI Preview
+ **UI Preview**
 Responsive movie grid with favorite toggles and pagination.
-(You can add screenshots or a short GIF here after deployment.)
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9572e8fb-0ba3-4f34-82fc-26146afaa71f" />
 
- Reasoning
+
+**Reasoning**
 This project uses Client-Side Rendering (CSR) for better interactivity and easier caching through TanStack Query.
 If SEO were a priority, switching to SSR would be trivial in Next.js.
 
