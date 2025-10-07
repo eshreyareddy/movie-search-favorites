@@ -57,43 +57,37 @@ Built using **Next.js (React, TanStack Query)** on the frontend and **NestJS (No
 ## Getting Started
 
 1. Clone the repo
-```bash
+
 git clone https://github.com/eshreyareddy/movie-search-favorites.git
 cd movie-search-favorites
+
 2. Run the backend
-bash
-Copy code
+
 cd backend
 npm install
 npm run start:dev
 Server runs on http://localhost:4000
 
 3. Run the frontend
-bash
-Copy code
+
 cd ../frontend
 npm install
 npm run dev
 Frontend runs on http://localhost:3000
 
  Bonus Enhancements
-If this were deployed to production, I’d add:
-
-Persistent favorites (SQLite or Supabase)
-
-API rate-limit caching (Redis)
-
-Auth (Supabase / Auth.js)
-
-Docker deployment
-
-CI/CD (GitHub Actions)
-
-Unit tests (Jest + React Testing Library)
+-If this were deployed to production, I’d add:
+-Persistent favorites (SQLite or Supabase)
+-API rate-limit caching (Redis)
+-Auth (Supabase / Auth.js)
+-Docker deployment
+-CI/CD (GitHub Actions)
+-Unit tests (Jest + React Testing Library)
 
  UI Preview
 Responsive movie grid with favorite toggles and pagination.
-(You can add screenshots or a short GIF here after deployment.)
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9572e8fb-0ba3-4f34-82fc-26146afaa71f" />
+
 
  Reasoning
 This project uses Client-Side Rendering (CSR) for better interactivity and easier caching through TanStack Query.
