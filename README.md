@@ -1,11 +1,12 @@
-# Movie Search + Favorites
+# Movie Search and Favorites
 
-A full-stack web app that lets users search movies from the **OMDb API** and manage their favorites.  
-Built using **Next.js (React, TanStack Query)** on the frontend and **NestJS (Node.js)** on the backend.
+A full-stack web application that allows users to search movies using the OMDb API and manage their favorites list.  
+The project demonstrates a modular full-stack architecture with **Next.js (React, TanStack Query)** for the frontend and **NestJS (Node.js)** for the backend.
 
 ---
 
 ## Tech Stack
+
 **Frontend**
 - Next.js 15 (React)
 - TanStack Query (React Query)
@@ -15,18 +16,19 @@ Built using **Next.js (React, TanStack Query)** on the frontend and **NestJS (No
 **Backend**
 - NestJS
 - Axios (for OMDb API integration)
-- In-memory data store (favorites)
+- In-memory data store for favorites
 
 ---
 
 ## Features
-Search movies via OMDb API  
-View title, year, and poster in a responsive grid  
-Add or remove favorites (stored in memory)  
-Favorites page with cached results  
-Pagination / infinite scroll for search results  
-Mobile-friendly layout with TailwindCSS  
-Clear modular codebase
+
+- Search movies via OMDb API  
+- View title, year, and poster in a responsive grid  
+- Add or remove favorites (stored in memory)  
+- Favorites page with cached results  
+- Pagination / infinite scrolling for search results  
+- Mobile-friendly interface built with TailwindCSS  
+- Clear, maintainable, modular codebase
 
 ---
 
@@ -34,29 +36,31 @@ Clear modular codebase
 
 | Method | Endpoint | Description |
 |---------|-----------|-------------|
-| `GET` | `/movies/search?q=<query>` | Search for movies via OMDb |
-| `GET` | `/favorites` | List all favorite movies |
-| `POST` | `/favorites` | Add a movie to favorites |
-| `DELETE` | `/favorites/:imdbID` | Remove from favorites |
+| GET | `/movies/search?q=<query>` | Search for movies using OMDb |
+| GET | `/favorites` | Retrieve all favorite movies |
+| POST | `/favorites` | Add a movie to favorites |
+| DELETE | `/favorites/:imdbID` | Remove a movie from favorites |
 
 ---
 
 ## Architecture Overview
+
 **Frontend**
-- `useMovies()` → fetches paginated movie data
-- `useFavorites()` → handles add/remove/list mutations
-- `MovieCard` → displays movie with favorite toggle
-- `TanStack Query` handles caching + background updates
+- `useMovies()` fetches paginated movie data  
+- `useFavorites()` manages add, remove, and list mutations  
+- `MovieCard` component displays each movie with a favorite toggle  
+- TanStack Query handles caching and background refetching
 
 **Backend**
-- `/movies` → queries OMDb API and returns simplified JSON  
-- `/favorites` → stores movies in memory for current session
+- `/movies` module queries OMDb API and returns simplified results  
+- `/favorites` module manages an in-memory list of favorite movies  
+- CORS enabled for local frontend communication
 
 ---
 
 ## Getting Started
 
-### 1. Clone the repo
+### 1. Clone the repository
 ```bash
 git clone https://github.com/eshreyareddy/movie-search-favorites.git
 cd movie-search-favorites
@@ -66,7 +70,7 @@ Copy code
 cd backend
 npm install
 npm run start:dev
-Server runs on http://localhost:4000
+The backend will start on http://localhost:4000
 
 3. Run the frontend
 bash
@@ -74,22 +78,22 @@ Copy code
 cd ../frontend
 npm install
 npm run dev
-Frontend runs on http://localhost:3000
+The frontend will start on http://localhost:3000
 
- Bonus Enhancements
-If this were deployed to production, I’d add:
+Future Improvements
+If deployed to production, the following enhancements are recommended:
 
-Persistent favorites (SQLite or Supabase)
+Persistent storage using SQLite or PostgreSQL
 
-API rate-limit caching (Redis)
+API caching layer (Redis)
 
-Auth (Supabase / Auth.js)
+User authentication (Supabase or Auth.js)
 
-Docker deployment
+Docker deployment for consistency
 
-CI/CD (GitHub Actions)
+CI/CD pipeline with GitHub Actions
 
-Unit tests (Jest + React Testing Library)
+Unit tests using Jest and React Testing Library
 
  UI Preview
 Responsive movie grid with favorite toggles and pagination.
